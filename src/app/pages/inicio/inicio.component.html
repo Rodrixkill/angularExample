@@ -1,0 +1,19 @@
+<!--<p>inicio works!</p>
+<div *ngIf="photo.id == 1">
+    <h3>{{photo.title}} photo == 1</h3>
+</div>
+<br />
+<div *ngIf="photo.id != 1">
+    <h3>{{photo.title}} photo != 1</h3>
+</div>
+<br />-->
+<div class="row">
+    <div *ngFor="let item of listPhotos" class="card col-md-4" style="width: 18rem;">
+        <img src="{{item.thumbnailUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.albumId}}</p>
+        <a class="btn btn-primary" (click)="irDetalle(item)">Mas detalles</a>
+        </div>
+    </div>
+</div>

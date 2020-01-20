@@ -1,0 +1,13 @@
+<a class="btn btn-primary" (click)="create()"> Crear nuevo usuario</a>
+<br />
+<div class="row">
+  <div *ngFor="let item of listUsuarios" class="card col-md-4" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">{{item.nombre}}</h5>
+      <p class="card-text">Con el carnet de identidad n&uacute;mero:{{item.ci}}</p>
+      <a class="btn btn-primary" (click)="update(item)">Update </a>
+      &nbsp;
+      <a class="btn btn-primary" (click)="eliminar(item)"> Eliminar</a>
+      </div>
+  </div>
+</div>
